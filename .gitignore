@@ -1,0 +1,4 @@
+code_backup/
+*.log
+*.out
+__pycache__/

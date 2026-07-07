@@ -1,0 +1,38 @@
+DATA SOURCES
+============
+Public databases used in this project. NOT included in the repository due to size;
+download from the sources below to reproduce the analysis.
+
+1. Pig Virome Database (PVD) - primary viral input
+   Reference: Mi et al. (2024), npj Biofilms and Microbiomes 10:76
+   Content: 5,566,804 viral contigs / 48,299 vOTUs from 4,650 pig gut metagenomes
+   Use: source of viral contigs; filtered here with CheckV (completeness > 90%)
+
+2. NCBI nr (non-redundant protein database)
+   Use: DIAMOND blastp reference
+   Access: https://ftp.ncbi.nlm.nih.gov/blast/db/
+
+3. CheckV database (v1.5)
+   Reference: Nayfach et al. (2021), Nat Biotechnol
+   Access: https://portal.nersc.gov/CheckV/
+
+4. CheckAMG database (v1_20260128)
+   Use: AVG identification + functional annotation
+   Access: AnantharamanLab / CheckAMG (GitHub)
+
+5. iPHoP database (v1.4)
+   Reference: Roux et al. (2023), PLoS Biol 21:e3002083
+   Access: https://bitbucket.org/srouxjgi/iphop/
+
+6. geNomad database
+   Reference: Camargo et al. (2024), Nat Biotechnol
+   Access: https://portal.nersc.gov/genomad/
+
+7. PhaGCN3
+   Use: viral taxonomic classification (high-confidence predictions)
+   Access: PhaGCN / PhaBOX (GitHub)
+
+8. Bacterial reference genomes (self-assembled set)
+   Content: 179 complete RefSeq genomes, 20 pig-gut genera across 5 phyla
+   Download: via NCBI 'datasets' tool (see download_sampled.sh in code/)
+   Note: after geNomad prophage removal -> 511,333 clean bacterial proteins
